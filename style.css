@@ -2,7 +2,9 @@
     --clr-bg : #ffffff;
     --clr-txt : #000000;
     
-    --font: 'Indie Flower','gaegu',cursive;
+    --font : 'Indie Flower','gaegu',cursive;
+
+    --padding1 : 0 70px;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 a, a:visited, a:link, a:active {
@@ -31,7 +33,6 @@ html,body{
 }
 
 body{
-    padding: 0 70px;
     line-height: 135%;
     font-family: var(--font);
     background-color: var(--clr-bg);
@@ -41,12 +42,16 @@ body{
 }
 
 body>header{
+    padding: var(--padding1);
     height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
 }
 #nav{
+    padding: var(--padding1);
+    padding-bottom: 30px;
+    border-bottom : #000000 1px solid;
     display: flex;
 }
 #nav a:hover {
@@ -55,7 +60,7 @@ body>header{
 #nav1 a {
     display: block;
 	padding-left: 2px;
-	width: 90px;
+	width: 120px;
 }
 #nav2 a {
     display: block;
