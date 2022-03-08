@@ -1,0 +1,33 @@
+:root{
+    --clr-bg : #ffffff;
+    --clr-txt : #000000;
+    
+    --font : 'Indie Flower','gaegu',cursive;
+
+    --padding1 : 0 70px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+a, a:visited, a:link, a:active {
+	color: #333;
+	text-decoration: none;
+    cursor: pointer;
+}
+ul, ol, dl, menu, dir, li, dt, dd {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-style: normal;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+	vertical-align: baseline;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+html,body{
+    width: 100%;height: 100%;
+}
