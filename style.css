@@ -1,25 +1,36 @@
 @import url(reset.css);
 
-
+body{
+    line-height: 135%;
+    /* font-family: var(--font); */
+	font-family:
+		verdana,
+		geneva,
+		helvetica,
+		arial,
+		sans-serif;
+	font-size: xx-small;
+	line-height: 135%;
+    background-color: var(--clr-bg);
+    color: var(--clr-txt);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
 header{
     padding: var(--padding1);
     height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
-    border-bottom : #000000 1px solid;
-}
-body{
-    line-height: 135%;
-    font-family: var(--font);
-    background-color: var(--clr-bg);
-    color: var(--clr-txt);
-    display: flex;
-    flex-direction: column;
+    /* border-bottom : #000000 1px solid; */
 }
 #nav{
-    border-bottom : #000000 1px solid;
-    border-right : #000000 1px solid;
     padding: var(--padding1);
     display: flex;
     width: 300px;
@@ -40,12 +51,40 @@ body{
 }
 /* ++++++++++++++++++++ */
 #contents {
-    position: relative;
-    border-top : #000000 1px solid;
-    margin-top: 20px;
-    padding: 50px 0 0 70px;
+    /* border-left : #000000 1px solid; */
+    padding-left: 20px;
     width: auto;height: 100%;
 }
 #contents a:hover{
     text-decoration-line: underline;
+}
+
+
+
+
+
+
+
+/* ++++++++++++++++++++ */
+@media screen and (max-width:530px) {
+    body{
+        font-size: small;
+    }
+    main{
+        display: block;
+        padding: 0;
+    }
+    #nav,
+    #contents{
+        width: 100%;
+        padding: 30px;
+    }
+    header{
+        padding-left: 30px;
+        line-height: 180%;
+    }
+    header,
+    #nav{
+        border-bottom: var(--border);
+    }
 }
