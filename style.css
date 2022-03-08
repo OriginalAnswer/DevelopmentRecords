@@ -28,6 +28,8 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
+    font-size: 1.5em;
+    line-height:normal;
     /* border-bottom : #000000 1px solid; */
 }
 #nav{
@@ -46,8 +48,12 @@ header{
 }
 #nav2 a {
     display: block;
-	padding-left: 10px;
+	padding-left: 5px;
 	width: 120px;
+}
+#nav1 ul li:first-child,
+#nav2 ul li:first-child{
+    background-color: var(--clr-a);
 }
 /* ++++++++++++++++++++ */
 #contents {
@@ -67,9 +73,9 @@ header{
 
 /* ++++++++++++++++++++ */
 @media screen and (max-width:530px) {
-    body{
+    /* body{
         font-size: small;
-    }
+    } */
     main{
         display: block;
         padding: 0;
