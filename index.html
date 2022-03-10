@@ -38,11 +38,11 @@
         </nav>
     </form>
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <form onchange="n2Change()">
+    <form onclick="n2Change()">
         <nav class="n2" id="n1-1-2">
             <ul>
-                <input name="n1-1-2" id="connect-n1-1-2-1" value="n1-1-2-1" type="radio">
-                <input name="n1-1-2" id="connect-n1-1-2-2" value="n1-1-2-2" type="radio"> 
+                <input name="n1-1-2" id="connect-n1-1-2-1" value="n1-1-2-1">
+                <input name="n1-1-2" id="connect-n1-1-2-2" value="n1-1-2-2"> 
 
                 <label for="connect-n1-1-2-1"> <li id="n1-1-2-1">2022</li></label>
                 <label for="connect-n1-1-2-2"> <li id="n1-1-2-2">(developments menu clicked)</li></label>
@@ -51,8 +51,8 @@
         </nav>
         <nav class="n2" id="n1-2-2">
             <ul>
-                <input name="n1-2-2" id="connect-n1-2-2-1" value="n1-2-2-1" type="radio">
-                <input name="n1-2-2" id="connect-n1-2-2-2" value="n1-2-2-2" type="radio">
+                <input name="n1-2-2" id="connect-n1-2-2-1" value="n1-2-2-1">
+                <input name="n1-2-2" id="connect-n1-2-2-2" value="n1-2-2-2">
                 
                 <label for="connect-n1-2-2-1"> <li id="n1-2-2-1">2022</li></label>
                 <label for="connect-n1-2-2-2"> <li id="n1-2-2-2">(blender menu clicked)</li></label>
@@ -60,8 +60,8 @@
         </nav>
         <nav class="n2" id="n1-3-2">
             <ul>
-                <input name="n1-3-2" id="connect-n1-3-2-1" value="n1-3-2-1" type="radio">
-                <input name="n1-3-2" id="connect-n1-3-2-2" value="n1-3-2-2" type="radio">
+                <input name="n1-3-2" id="connect-n1-3-2-1" value="n1-3-2-1">
+                <input name="n1-3-2" id="connect-n1-3-2-2" value="n1-3-2-2">
 
                 <label for="connect-n1-3-2-1"> <li id="n1-3-2-1">2022</li></label>
                 <label for="connect-n1-3-2-2"> <li id="n1-3-2-2">(audio menu clicked)</li></label>
@@ -186,37 +186,9 @@ const c_n1_3_2_1 = document.getElementById('c__n1-3-2-1');
 
 // +++++++++++++++++++++++++++++++++++++
 
-function n1Change(){
-    let v = event.target.value;
-    
-    n1_1.style.backgroundColor = '';
-    n1_2.style.backgroundColor = '';
-    n1_3.style.backgroundColor = '';
-    
-    n1_1_2.style.display = 'none';
-    n1_2_2.style.display = 'none';
-    n1_3_2.style.display = 'none';
-
-    c_n1_1_2_1.style.display = 'none';
-    c_n1_2_2_1.style.display = 'none';
-    c_n1_3_2_1.style.display = 'none';
-
-    if (v === 'n1-1') {
-        n1_1.style.backgroundColor = 'var(--clr-selected)';
-        n1_1_2.style.display = 'block';
-    } else if(v === 'n1-2'){
-        n1_2.style.backgroundColor = 'var(--clr-selected)';
-        n1_2_2.style.display = 'block';
-    } else if(v === 'n1-3'){
-        n1_3.style.backgroundColor = 'var(--clr-selected)';
-        n1_3_2.style.display = 'block';
-    }
-}
-
 // +++++++++++++++++++++++++++++++++++++
 function n2Change(){
     let v = event.target.value;
-    console.log(v);
     
     n1_1_2_1.style.backgroundColor = '';
     n1_1_2_2.style.backgroundColor = '';
@@ -253,8 +225,42 @@ function n2Change(){
     console.log(v);
 }
 
+function n1Change(){
+    let v = event.target.value;
+    
+    n1_1.style.backgroundColor = '';
+    n1_2.style.backgroundColor = '';
+    n1_3.style.backgroundColor = '';
+    
+    n1_1_2.style.display = 'none';
+    n1_2_2.style.display = 'none';
+    n1_3_2.style.display = 'none';
 
+    
+    n1_1_2_1.style.backgroundColor = '';
+    n1_1_2_2.style.backgroundColor = '';
+    n1_2_2_1.style.backgroundColor = '';
+    n1_2_2_2.style.backgroundColor = '';
+    n1_3_2_1.style.backgroundColor = '';
+    n1_3_2_2.style.backgroundColor = '';
 
+    c_n1_1_2_1.style.display = 'none';
+    c_n1_2_2_1.style.display = 'none';
+    c_n1_3_2_1.style.display = 'none';
+
+    if (v === 'n1-1') {
+        n1_1.style.backgroundColor = 'var(--clr-selected)';
+        n1_1_2.style.display = 'block';
+    } else if(v === 'n1-2'){
+        n1_2.style.backgroundColor = 'var(--clr-selected)';
+        n1_2_2.style.display = 'block';
+        c_n1_2_2_1.style.display = 'block';
+    } else if(v === 'n1-3'){
+        n1_3.style.backgroundColor = 'var(--clr-selected)';
+        n1_3_2.style.display = 'block';
+        c_n1_3_2_1.style.display = 'block';
+    }
+}
 </script>
 <!-- <script src="main.js"></script> -->
 </body>

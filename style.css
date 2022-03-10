@@ -55,7 +55,9 @@ header{
 #n1-1-2{display: none;}
 #n1-2-2{display: none;}
 #n1-3-2{display: none;}
-input[type='radio']{display: none;}
+/* input[type='radio']{display: none;} */
+.n1 input,
+.n2 input{display: none;}
 /* ++++++++++++++++++++ */
 .contents {
     display: none;
