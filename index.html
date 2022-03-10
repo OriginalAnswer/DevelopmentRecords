@@ -171,6 +171,18 @@ const n1_1_2 = document.getElementById('n1-1-2');
 const n1_2_2 = document.getElementById('n1-2-2');
 const n1_3_2 = document.getElementById('n1-3-2');
 
+// +++++++++++++++++++++++++++++++++++++
+const n1_1_2_1 = document.getElementById('n1-1-2-1');
+const n1_1_2_2 = document.getElementById('n1-1-2-2');
+const n1_2_2_1 = document.getElementById('n1-2-2-1');
+const n1_2_2_2 = document.getElementById('n1-2-2-2');
+const n1_3_2_1 = document.getElementById('n1-3-2-1');
+const n1_3_2_2 = document.getElementById('n1-3-2-2');
+
+
+const c_n1_1_2_1 = document.getElementById('c__n1-1-2-1');
+const c_n1_2_2_1 = document.getElementById('c__n1-2-2-1');
+const c_n1_3_2_1 = document.getElementById('c__n1-3-2-1');
 
 // +++++++++++++++++++++++++++++++++++++
 
@@ -185,6 +197,10 @@ function n1Change(){
     n1_2_2.style.display = 'none';
     n1_3_2.style.display = 'none';
 
+    c_n1_1_2_1.style.display = 'none';
+    c_n1_2_2_1.style.display = 'none';
+    c_n1_3_2_1.style.display = 'none';
+
     if (v === 'n1-1') {
         n1_1.style.backgroundColor = 'var(--clr-selected)';
         n1_1_2.style.display = 'block';
@@ -196,19 +212,6 @@ function n1Change(){
         n1_3_2.style.display = 'block';
     }
 }
-
-// +++++++++++++++++++++++++++++++++++++
-const n1_1_2_1 = document.getElementById('n1-1-2-1');
-const n1_1_2_2 = document.getElementById('n1-1-2-2');
-const n1_2_2_1 = document.getElementById('n1-2-2-1');
-const n1_2_2_2 = document.getElementById('n1-2-2-2');
-const n1_3_2_1 = document.getElementById('n1-3-2-1');
-const n1_3_2_2 = document.getElementById('n1-3-2-2');
-
-
-const c_n1_1_2_1 = document.getElementById('c__n1-1-2-1');
-const c_n1_2_2_1 = document.getElementById('c__n1-2-2-1');
-const c_n1_3_2_1 = document.getElementById('c__n1-3-2-1');
 
 // +++++++++++++++++++++++++++++++++++++
 function n2Change(){
