@@ -39,10 +39,10 @@ header{
     width: 300px;
     height: 100%;
 }
-#nav a:hover {
+#nav li:hover {
     background-color: var(--clr-a);
 }
-#nav1 a {
+#nav1 li {
     display: block;
 	padding-left: 2px;
 	width: 100px;
@@ -57,7 +57,7 @@ header{
 #nav-d{display: none;}
 #nav-b{display: none;}
 #nav-a{display: none;}
-
+input[type='radio']{display: none;}
 /* ++++++++++++++++++++ */
 #contents {
     padding-left: 20px;
