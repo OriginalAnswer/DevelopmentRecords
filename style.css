@@ -9,7 +9,7 @@ body{
 		helvetica,
 		arial,
 		sans-serif;
-	font-size: xx-small;
+	font-size: 0.8em;
 	line-height: 135%;
     background-color: var(--clr-bg);
     color: var(--clr-txt);
@@ -57,14 +57,17 @@ header{
 }
 /* ++++++++++++++++++++ */
 #contents {
-    /* border-left : #000000 1px solid; */
     padding-left: 20px;
     width: auto;height: 100%;
 }
 #contents a:hover{
     text-decoration-line: underline;
 }
-
+/* ++++++++++++++++++++ */
+/* 메인 섹션 */
+.develope-22{display: block;}
+.blender-22{display: none;}
+.audio{display: none;}
 
 
 
