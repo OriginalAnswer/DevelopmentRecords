@@ -23,36 +23,52 @@
 <main>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <nav id="nav">
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <nav id="nav1">
         <ul>
-            <form onchange="nav1checked()">
-                <input type="radio" name="nav1" id="developments" value="developments">  
-                <label for="developments"><li id="c1">developments</li></label>
-                <input type="radio" name="nav1" id="blender" value="blender">
-                <label for="blender"><li id="c2">blender</li></label>
-                <input type="radio" name="nav1" id="audio" value="audio">
-                <label for="audio"><li id="c3">audio</li></label>
+            <form onchange="nav1Click()">
+                <input name="n1" id="connect-nav1-1" value="nav1-1" type="radio">  
+                <input name="n1" id="connect-nav1-2" value="nav1-2" type="radio">
+                <input name="n1" id="connect-nav1-3" value="nav1-3" type="radio">
+                
+                <label for="connect-nav1-1"> <li id="nav1-1">developments</li></label>
+                <label for="connect-nav1-2"> <li id="nav1-2">blender</li></label>
+                <label for="connect-nav1-3"> <li id="nav1-3">audio</li></label>
             </form>
         </ul>
     </nav>
-    <nav id="nav-d">
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <nav class="nav2" id="nav1-1">
         <ul>
-            <li><a>2022</a></li>
+            <input name="nav1-1" id="connect-nav1-1-1" value="nav1-1-1" type="radio">
+            <input name="nav1-1" id="connect-nav1-1-2" value="nav1-1-2" type="radio"> 
+
+            <label for="connect-nav1-1-1"> <li>2022</li></label>
+            <label for="connect-nav1-1-2"> <li>(developments menu clicked)</li></label>
+
         </ul>
     </nav>
-    <nav id="nav-b">
+    <nav class="nav2" id="nav1-2">
         <ul>
-            <li><a>2022</a></li>
+            <input name="nav1-2" id="connect-nav1-2-1" value="nav1-2-1" type="radio">
+            <input name="nav1-2" id="connect-nav1-2-2" value="nav1-2-2" type="radio">
+            
+            <label for="connect-nav1-2"> <li>2022</li></label>
+            <label for="connect-nav1-2"> <li>(blender menu clicked)</li></label>
         </ul>
     </nav>
-    <nav id="nav-a">
+    <nav class="nav2" id="nav1-3">
         <ul>
-            <li><a>2022</a></li>
+            <input name="nav1-3" id="connect-nav1-3-1" value="nav1-3-1" type="radio">
+            <input name="nav1-3" id="connect-nav1-3-2" value="nav1-3-2" type="radio">
+
+            <label for="connect-nav1-3-1"> <li>2022</li></label>
+            <label for="connect-nav1-3-2"> <li>(blender menu clicked)</li></label>
         </ul>
     </nav>
 </nav>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<section id="contents" class=" develope-22">
+<section class="contents" id="develope-22">
     <article><a target="_blank" href="https://originalanswer.github.io/2022HappyNewYear/">
     <span class="title">happy new year</span>
     <span class="description"></span></a></article>
@@ -134,11 +150,11 @@
     <span class="description"></span></a></article>
 </section>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<section id="contents" class="blender-22">
+<section class="contents" id="blender-22">
     준비중
 </section>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<section id="contents" class="audio">
+<section class="contents" id="audio">
     준비중
 </section>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -146,9 +162,40 @@
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 </body>
 <script type="text/javascript">
-    function nav1checked(){
-        let v = event.target.value;
-        console.log(v);
+const js_nav1_1 = document.getElementById('connent-nav1-1');
+const js_nav1_2 = document.getElementById('connent-nav1-2');
+const js_nav1_3 = document.getElementById('connent-nav1-3');
+
+const nav1_1 = document.getElementById('nav1-1');
+const nav1_2 = document.getElementById('nav1-2');
+const nav1_3 = document.getElementById('nav1-3');
+
+const nav2_1 = document.getElementById('nav2-1');
+const nav2_2 = document.getElementById('nav2-2');
+const nav2_3 = document.getElementById('nav2-3');
+// +++++++++++++++++++++++++++++++++++++
+function nav1Click(){
+    let v = event.target.value;
+    
+    nav1_1.style.backgroundColor = '';
+    nav1_2.style.backgroundColor = '';
+    nav1_3.style.backgroundColor = '';
+    
+    nav2_1.style.display = 'none';
+    nav2_2.style.display = 'none';
+    nav2_3.style.display = 'none';
+
+    if (v === 'nav1-1') {
+        nav1_1.style.backgroundColor = 'var(--clr-selected)';
+        nav2_1.style.display = 'block';
+    } else if(v === 'nav1-2'){
+        nav1_2.style.backgroundColor = 'var(--clr-selected)';
+        nav2_2.style.display = 'block';
+    } else if(v === 'nav1-3'){
+        nav1_3.style.backgroundColor = 'var(--clr-selected)';
+        nav2_3.style.display = 'block';
     }
+}
 </script>
+<!-- <script src="main.js"></script> -->
 </html>
