@@ -24,21 +24,21 @@
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <nav id="nav">
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <nav id="nav1">
+    <nav id="n1">
         <ul>
-            <form onchange="nav1Click()">
-                <input name="n1" id="connect-nav1-1" value="nav1-1" type="radio">  
-                <input name="n1" id="connect-nav1-2" value="nav1-2" type="radio">
-                <input name="n1" id="connect-nav1-3" value="nav1-3" type="radio">
+            <form onchange="n1Click()">
+                <input name="n1" id="connect-n1-1" value="n1-1" type="radio">  
+                <input name="n1" id="connect-n1-2" value="n1-2" type="radio">
+                <input name="n1" id="connect-n1-3" value="n1-3" type="radio">
                 
-                <label for="connect-nav1-1"> <li id="nav1-1">developments</li></label>
-                <label for="connect-nav1-2"> <li id="nav1-2">blender</li></label>
-                <label for="connect-nav1-3"> <li id="nav1-3">audio</li></label>
+                <label for="connect-n1-1"> <li id="n1-1">developments</li></label>
+                <label for="connect-n1-2"> <li id="n1-2">blender</li></label>
+                <label for="connect-n1-3"> <li id="n1-3">audio</li></label>
             </form>
         </ul>
     </nav>
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <nav class="nav2" id="nav1-1">
+    <nav class="n2" id="n1-1-1">
         <ul>
             <input name="nav1-1" id="connect-nav1-1-1" value="nav1-1-1" type="radio">
             <input name="nav1-1" id="connect-nav1-1-2" value="nav1-1-2" type="radio"> 
@@ -48,7 +48,7 @@
 
         </ul>
     </nav>
-    <nav class="nav2" id="nav1-2">
+    <nav class="n2" id="n1-2-1">
         <ul>
             <input name="nav1-2" id="connect-nav1-2-1" value="nav1-2-1" type="radio">
             <input name="nav1-2" id="connect-nav1-2-2" value="nav1-2-2" type="radio">
@@ -57,7 +57,7 @@
             <label for="connect-nav1-2"> <li>(blender menu clicked)</li></label>
         </ul>
     </nav>
-    <nav class="nav2" id="nav1-3">
+    <nav class="n2" id="n1-3-1">
         <ul>
             <input name="nav1-3" id="connect-nav1-3-1" value="nav1-3-1" type="radio">
             <input name="nav1-3" id="connect-nav1-3-2" value="nav1-3-2" type="radio">
@@ -160,42 +160,38 @@
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 </main>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-</body>
 <script type="text/javascript">
-const js_nav1_1 = document.getElementById('connent-nav1-1');
-const js_nav1_2 = document.getElementById('connent-nav1-2');
-const js_nav1_3 = document.getElementById('connent-nav1-3');
+const nav1_1 = document.getElementById('n1-1');
+const nav1_2 = document.getElementById('n1-2');
+const nav1_3 = document.getElementById('n1-3');
 
-const nav1_1 = document.getElementById('nav1-1');
-const nav1_2 = document.getElementById('nav1-2');
-const nav1_3 = document.getElementById('nav1-3');
-
-const nav2_1 = document.getElementById('nav2-1');
-const nav2_2 = document.getElementById('nav2-2');
-const nav2_3 = document.getElementById('nav2-3');
+const n1_1_1 = document.getElementById('n1-1-1'); 
+const n1_2_1 = document.getElementById('n1-2-1');
+const n1_3_1 = document.getElementById('n1-3-1');
 // +++++++++++++++++++++++++++++++++++++
-function nav1Click(){
+function n1Click(){
     let v = event.target.value;
     
     nav1_1.style.backgroundColor = '';
     nav1_2.style.backgroundColor = '';
     nav1_3.style.backgroundColor = '';
     
-    nav2_1.style.display = 'none';
-    nav2_2.style.display = 'none';
-    nav2_3.style.display = 'none';
+    n1_1_1.style.display = 'none';
+    n1_2_1.style.display = 'none';
+    n1_3_1.style.display = 'none';
 
-    if (v === 'nav1-1') {
+    if (v === 'n1-1') {
         nav1_1.style.backgroundColor = 'var(--clr-selected)';
-        nav2_1.style.display = 'block';
-    } else if(v === 'nav1-2'){
+        n1_1_1.style.display = 'block';
+    } else if(v === 'n1-2'){
         nav1_2.style.backgroundColor = 'var(--clr-selected)';
-        nav2_2.style.display = 'block';
-    } else if(v === 'nav1-3'){
+        n1_2_1.style.display = 'block';
+    } else if(v === 'n1-3'){
         nav1_3.style.backgroundColor = 'var(--clr-selected)';
-        nav2_3.style.display = 'block';
+        n1_3_1.style.display = 'block';
     }
 }
 </script>
 <!-- <script src="main.js"></script> -->
+</body>
 </html>
