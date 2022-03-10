@@ -32,6 +32,7 @@ header{
     line-height:normal;
     /* border-bottom : #000000 1px solid; */
 }
+/* ++++++++++++++++++++ */
 #nav{
     padding: var(--padding1);
     display: flex;
@@ -46,15 +47,17 @@ header{
 	padding-left: 2px;
 	width: 100px;
 }
-#nav2 a {
+#nav-d a,
+#nav-b a,
+#nav-a a {
     display: block;
 	padding-left: 5px;
 	width: 120px;
 }
-#nav1 ul li:first-child,
-#nav2 ul li:first-child{
-    background-color: var(--clr-a);
-}
+#nav-d{display: none;}
+#nav-b{display: none;}
+#nav-a{display: none;}
+
 /* ++++++++++++++++++++ */
 #contents {
     padding-left: 20px;
@@ -65,7 +68,7 @@ header{
 }
 /* ++++++++++++++++++++ */
 /* 메인 섹션 */
-.develope-22{display: block;}
+.develope-22{display: none;}
 .blender-22{display: none;}
 .audio{display: none;}
 
